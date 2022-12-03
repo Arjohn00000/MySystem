@@ -10,12 +10,17 @@ body{
     --night: #212121;
 }
 
+#icon{
+    margin-left: 30%;
+    width: 15px;
+    cursor: pointer;
+}
 nav ul{
     flex: 1;
     text-align: right;
 }
 .hero{
-    height: 100%;
+    height: 100vh;
     width: 100%;
     background: var(--day);
     font-family: sans-serif;
@@ -33,30 +38,33 @@ nav{
     width: 120px;
     cursor: pointer;
 }
-.not{
-    color: black;
-    padding: 10px 20px;
-    border-radius: 5px;
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
 }
-.not:hover{
-    color: red;
+nav ul li a{
+    text-decoration: none;
+    color: var(--night)
+}
+nav ul li a:hover{
+    color: #ff4321;
 }
 .info{
     margin-left: 8%;
     margin-top: 5%;
 }
 .info h1{
-    font-size: 65px;
+    font-size: 70px;
     color: var(--night);
     margin-bottom: 20px;
 }
 span{
-    color: red;
+    color: #ff4321;
 }
 .info p{
     color: var(--night);
     line-height: 22px;
-    font-size: 30px;
 }
 .info a{
     background: var(--night);
@@ -67,24 +75,47 @@ span{
     border-radius: 5px;
     text-decoration: none;
 }
-.info a:hover{
-    background-color: dimgray;
-}
-.info h3 a{
-    background-color: red;
-    line-height: 22px;
-    font-size: 20px;
-}
-.info h3 a:hover{
-    background-color: darkred;
-}
-/* .image-box{
+.image-box{
     width: 45%;
     height: 80%;
     position: absolute;
     bottom: 0;
     right: 100px;
-} */
+}
+.image-box h3 img{
+    height: 100%;
+    border-radius: 10%;
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+.image-box h3:hover img{
+    bottom: 40px;
+}
+.image-box img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
 /* .image-box:hover .back-img{
     bottom: 40px;
 } */
+.image-box:hover .front-img{
+    left: 54%;
+}
+.my-links{
+    margin-left: 8%;
+}
+.my-links a{
+    font-size: 30px;
+    color: var(--night);
+    margin-right: 20px;
+}
+.my-links a:hover{
+    color: #ff4321;
+}

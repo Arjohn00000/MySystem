@@ -46,6 +46,7 @@ if(isset($_GET['logout'])){
     }
 ?>
         <div class="row">
+        <img src="./images/bg1.jpg" class="bg">
         <h3><i><a href="home.php"><?php
                 $select=mysqli_query($conn, "SELECT * FROM `user_form` WHERE id='$user_id'") or die('query failed');
                 if(mysqli_num_rows($select)>0){

@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
     if (mysqli_num_rows($select)>0) {
         $row=mysqli_fetch_assoc($select);
         $_SESSION['user_id']= $row['id'];
-        header('location:home.php');
+        header('location:dashboard.php');
     }else {
         $error_message[]="Invalid Password or Email or Both";
     }

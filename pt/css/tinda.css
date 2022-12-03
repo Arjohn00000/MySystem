@@ -230,27 +230,66 @@
    background-color: var(--black);
 }
 .container .table thead th{
-    width: 13%;
+    width: 10%;
     font-size: 40px;
     background-color: var(--ufo);
 }
 .container .table thead, th, tr, td{
     color: var(--light-bg);
     background-color: var(--other);
-
+    text-align: center;
 }
-.container .row h3 i a img {
+.container .row h3 i a{
     height: 200px;
     width: 200px;
+    display: block;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1%;
     margin-left: 30%;
-    transition: all 1s;
 }
-.container .row h3 i a img:hover {
-    background-color: var(--light-bg);
-    transform: scale(1.1);
+.add .add-to{
+    color: var(--light-bg);
+    padding: 5px 25px;
+    border-radius: 5px;
+    background-color:var(--blue);
+    text-decoration: none;
+    text-align: center;
+    margin-left: 2%;
+}
+.add .add-to:hover{
+    background-color: var(--dark-blue);
+}
+.add .back-to{
+    color: var(--light-bg);
+    padding: 5px 25px;
+    border-radius: 5px;
+    background-color:var(--red);
+    text-decoration: none;
+    text-align: center;
+}
+.add .back-to:hover{
+    background-color: var(--dark-red);
+}
+.container .row img {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    bottom: 45%;
+    transform: translateX(-50%);
+    transition: bottom 1s;
+}
+.container img:hover {
+    bottom: 45.1%;
+}
+.container .row .bg{
+    height: 40%;
+    width: 81.8%;
+    position: absolute;
+    border-radius: 5px;
+    left: 50%;
+    bottom: 42.5%;
 }
 .container h3 i a:hover{
     font-size: 20px;

@@ -188,18 +188,35 @@
     position: fixed;
     margin-left: 15%;
 }
-.container .row h3 i a img {
+.container .row h3 i a{
     height: 200px;
     width: 200px;
+    display: block;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1%;
     margin-left: 25%;
-    transition: all 1s;
 }
-.container .row h3 i a img:hover {
-    background-color: var(--light-bg);
-    transform: scale(1.1);
+.container img {
+    height: 70px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 77.5%;
+    transform: translateX(-50%);
+    transition: bottom 1s;
+}
+.container img:hover {
+    bottom: 77%;
+}
+.container .row .bg{
+    height: 30%;
+    width: 100%;
+    position: absolute;
+    border-radius: 5px;
+    left: 50%;
+    bottom: 68%;
 }
 .container .row h2{
     font-size: 20px;

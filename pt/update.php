@@ -21,6 +21,7 @@
 <body>
     <div class="container">
         <div class="row">
+        <img src="./images/bg1.jpg" class="bg">
         <h3><i><a href="home.php"><?php
                 $user_id= $_SESSION['user_id'];
                 $select=mysqli_query($conn, "SELECT * FROM `user_form` WHERE id='$user_id'") or die('query failed');

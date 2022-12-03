@@ -16,32 +16,39 @@ if(isset($_GET['logout'])){
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Details</title>
-  <link rel="stylesheet" href="./css/details.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="stylesheet" href="./css/dashboard.css">
+  <title>ABOUT</title>
+    <link rel="stylesheet" href="./css/details.css">
 </head>
 <body>
-    <div class="container">
-
-        <div class="profile">
-        <h3><i><a href="home.php"><?php
-                $user_id= $_SESSION['user_id'];
+    <div class="hero">
+        <nav>
+          <img src="./images/mylogo1.png" class="logo">
+          <ul>
+            <li><a href="notes.php" class="not"><i class="fa-solid fa-envelope"> Notes</i></a></li>
+          </ul>
+          <a href="home.php">
+            <img src="./images/opawulo.png" id="icon">
+          </a>
+        </nav>
+        <div class="info"> <?php
                 $select=mysqli_query($conn, "SELECT * FROM `user_form` WHERE id='$user_id'") or die('query failed');
                 if(mysqli_num_rows($select)>0){
                     $fetch=mysqli_fetch_assoc($select);
                 }
-                if($fetch['image']==''){
-                    echo '<img src="images/default-avatar.png">';
-                }else{
-                    echo '<img src="uploaded_img/'.$fetch['image'].'">';
-                }
-            ?></a></i></h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                <p>See <a href="tinda.php?delete=<?php $user_id= $_SESSION['user_id']; echo $user_id; ?>">Business</a></p>
+            ?>
+            <h1>Hellow! <span><?php echo $fetch['name']; ?></span></h1>
+            <p>How are you? Are crazy?</p>
+            <a href="dashboard.php"><i class="fa-solid fa-list"></i> Go to Dashboard</a>
+            <h3><a href="rest.php"><i class="fa-solid fa-bed"></i> Click here</a> If you want to rest!</h3>
+        </div>
+        <div class="image-box">
+          <img src="./images/mylogo1.png" class="back-img">
         </div>
     </div>
 </body>
