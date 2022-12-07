@@ -45,7 +45,7 @@ if (isset($_POST['submit'])) {
   <title>Register</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body style="background-image: url('./images/temple.gif'); background-repeat: no-repeat;background-attachment: fixed; background-size: 100% 100%;">
 
     <div class="form-container">
         <form action="" method="POST" enctype="multipart/form-data">

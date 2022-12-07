@@ -22,10 +22,16 @@ if(isset($_GET['logout'])){
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
+<body style="background-image: url('./images/temple.gif'); background-repeat: no-repeat;background-attachment: fixed; background-size: 100% 100%;">
     <div class="container">
+    <div id="player">
+                <audio controls autoplay loop hidden>
+                    <source src="music.ogg" type="audio/ogg">
+                    <source src="./music/insikwakang.mp3" type="audio/mpeg">
+                </audio>
+            </div>
 
         <div class="profile">
             <?php

@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
     if (mysqli_num_rows($select)>0) {
         $row=mysqli_fetch_assoc($select);
         $_SESSION['user_id']= $row['id'];
-        header('location:dashboard.php');
+        header('location:feed.php');
     }else {
         $error_message[]="Invalid Password or Email or Both";
     }
@@ -26,10 +26,9 @@ if (isset($_POST['submit'])) {
   <title>Login</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body style="background-image: url('./images/temple.gif'); background-repeat: no-repeat;background-attachment: fixed; background-size: 100% 100%;">
 
     <div class="form-container">
-
         <form action="" method="POST" enctype="multipart/form-data">
             <h3>Login</h3>
             <?php
@@ -42,7 +41,7 @@ if (isset($_POST['submit'])) {
             <p>Login with your email and password</p>
             <input type="email" name="email" placeholder="Email" class="box" required>
             <input type="password" name="password" placeholder="Password" class="box" required>
-            <p><a href="recover_password.php">Forgot password?</a></p>
+            <p><a href="forgot.php" style="color:red; text-decoration:none">Forgot password?</a></p>
             <input type="submit" name="submit" value="Login" class="btn">
             <p>Don't have an account? <a href="register.php">Register</a></p>
         </form>

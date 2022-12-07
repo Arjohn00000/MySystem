@@ -46,18 +46,6 @@ if(isset($_GET['logout'])){
     }
 ?>
         <div class="row">
-        <img src="./images/bg1.jpg" class="bg">
-        <h3><i><a href="home.php"><?php
-                $select=mysqli_query($conn, "SELECT * FROM `user_form` WHERE id='$user_id'") or die('query failed');
-                if(mysqli_num_rows($select)>0){
-                    $fetch=mysqli_fetch_assoc($select);
-                }
-                if($fetch['image']==''){
-                    echo '<img src="images/default-avatar.png">';
-                }else{
-                    echo '<img src="uploaded_img/'.$fetch['image'].'">';
-                }
-            ?></a></i></h3>
             <form action="" method="POST">
                 <h2>Add</h2>
                 <div class="mb-3">

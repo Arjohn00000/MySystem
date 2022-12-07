@@ -53,7 +53,7 @@
   
   @media (max-width: 720px) {
     .main_nav_container {
-      position: relative;
+      position: fixed;
   
     }
   
@@ -108,8 +108,7 @@
         background: var(--bg-color);
         text-transform: capitalize;
         background-color: black;
-        padding: 2% 3% 2% 6%;
-        top: 6%;
+        top: 5%;
         position: fixed;
         width: 100%;
         right: 0;
@@ -163,6 +162,71 @@
         font-size: 50px;
         background-color: transparent;
         border: none;
+    }
+    .sec_nav_container {
+      display: flex;
+      justify-content: center;
+      background: var(--bg-color);
+      text-transform: capitalize;
+      background-color: black;
+      padding: 2% 3% 2% 6%;
+      top: 14.9%;
+      position: fixed;
+      width: 100%;
+      right: 0;
+  
+    
+    }
+    
+    .top_secnavbar {
+      right: 0;
+      display: flex;
+      width: 100%;
+      margin-top: 5%;
+      justify-content: space-between;
+    }
+    
+    .top_secnavbar div {
+      right: 0;
+      padding: 5% 5% 5% 5%;
+    }
+    
+    .top_secnavbar div p {
+      color: white;
+      right: 0;
+      
+    }
+  
+  .container .row .table{
+      display: block;
+      text-align: center;
+      color: black;
+      width: 100%;
+  }
+  .container .row .table thead th{
+      text-align: center;
+      border-radius: 10%;
+      padding: 6.4% 0;
+  }
+  .container .row .table tbody{
+      background-color: transparent;
+  }
+  .container .row .table tbody td{
+      width: 1%;
+      padding: 1% 0;
+      border: 2px solid black;
+      border-radius: 10%;
+      font-size: 30px;
+  
+  }
+  .btn{
+      font-size: 50px;
+      background-color: transparent;
+      border: none;
+  }
+  .logo img{
+      height: 40%;
+      width: 40%;
     }
 
 
@@ -228,66 +292,6 @@
     font-size: 50px;
     background-color: transparent;
     border: none;
-}
-.add .add-to{
-    color: black;
-    padding: 10% 10%;
-    border-radius: 5px;
-    background-color:var(--blue);
-    text-decoration: none;
-    text-align: center;
-    margin-left: 2%;
-}
-.add .add-to:hover{
-    background-color: var(--dark-blue);
-}
-.add .back-to{
-    color: black;
-    padding: 5% 25%;
-    border-radius: 5px;
-    background-color:var(--red);
-    text-decoration: none;
-    text-align: center;
-}
-.add .back-to:hover{
-    background-color: var(--dark-red);
-}
-.tble{
-    display: block;
-    text-align: center;
-    color: black;
-    width: 100%;
-    margin-top: 10%;
-}
-.tble th{
- bottom: 10%;
-}
-
-.tble tbody{
-    background-color: transparent;
-}
-.tble tbody td{
-    width: 1%;
-    padding: 5% 0;
-    border: none;
-    border-radius: 10%;
-
-}
-.tble tbody td .add-to{
-    font-size: 30px;
-    color: white;
-    background-color: blue;
-    padding: 3% 15%;
-    border-radius: 10%;
-
-}
-.tble tbody td .back-to{
-    font-size: 30px;
-    color: white;
-    background-color: red;
-    padding: 3% 15%;
-    border-radius: 10%;
-
 }
 .logo img{
     height: 40%;

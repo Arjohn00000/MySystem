@@ -3,6 +3,16 @@ include 'config.php';
 session_start();
 $user_id= $_SESSION['user_id'];
 
+if (!isset($user_id)) {
+    header('location:login.php');
+};
+
+if(isset($_GET['logout'])){
+    unset($user_id);
+    session_destroy();
+    header('location:./login.php');
+}
+
 if (isset($_POST['update_profile'])) {
     $update_name= mysqli_real_escape_string($conn, $_POST['update_name']);
     $update_email= mysqli_real_escape_string($conn, $_POST['update_email']);
@@ -54,9 +64,9 @@ if (isset($_POST['update_profile'])) {
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Update profile</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
+<body style="background-image: url('./images/temple.gif'); background-repeat: no-repeat;background-attachment: fixed; background-size: 100% 100%;">
     <div class="update_profile">
     <?php
         $user_id= $_SESSION['user_id'];
@@ -83,7 +93,12 @@ if (isset($_POST['update_profile'])) {
                     echo '<div class="message">'.$message.'</div>';
                 }
             }
-        ?>
+            ?><div id="player">
+                <audio controls autoplay hidden>
+                    <source src="music.ogg" type="audio/ogg">
+                    <source src="./music/update_profile.mp3" type="audio/mpeg">
+                </audio>
+            </div>
         <div class="flex">
             <div class="inputBox">
                 <span>Username :</span>
@@ -103,7 +118,7 @@ if (isset($_POST['update_profile'])) {
                 <input type="password"  name="confirm_pass" class="box" >
             </div>
         </div>
-        <input type="submit" name="update_profile" value="Update profile" class="btn">
+        <input type="submit" name="update_profile" value="Update now" class="btn">
         <a href="home.php" class="back-btn">Back</a>
     </form>
     </div>

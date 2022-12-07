@@ -6,6 +6,7 @@ $user_id= $_SESSION['user_id'];
 if (!isset($user_id)) {
     header('location:login.php');
 };
+
 if(isset($_GET['logout'])){
     unset($user_id);
     session_destroy();
@@ -22,14 +23,15 @@ if(isset($_GET['logout'])){
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
   <title>HTML</title>
-
-
-
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="./css/tinda.css">
+  <link rel="stylesheet" href="./css/tinda_display.css">
 </head>
-
 <body>
+    <div id="player">
+      <audio controls autoplay hidden>
+          <source src="music.ogg" type="audio/ogg">
+          <source src="./music/baligya.mp3" type="audio/mpeg">
+      </audio>
+  </div>
   <div class="main_nav_container">
     <div class="nav_container">
       <div class="logo">
@@ -54,7 +56,7 @@ if(isset($_GET['logout'])){
         <div><p>PRODUCT</p></div>
         <div><p>PRICE</p></div>
         <div><p>STOCKS</p></div>
-        <div><p>ACTION STAR</p></div>
+        <div><p>PURCHASE</p></div>
       </div>
   </div>
   <div class="container">
@@ -64,21 +66,19 @@ if(isset($_GET['logout'])){
                     <th></th>
                 </thead>
                 <tbody>
-                <?php
-                       include 'config.php';
-                       $user_id= $_SESSION['user_id'];
-                       $select = "SELECT * from `market` WHERE user_id= '$user_id' ";                      
-                       $query = mysqli_query($conn, $select);                        
-                       while($res = mysqli_fetch_array($query)){
+                    <?php
+                        include 'config.php';
+                        $select = "select * from market";                      
+                        $query = mysqli_query($conn,$select);                        
+                        while($res = mysqli_fetch_array($query)){     
                     ?>
                             <tr>
                                 <td> <?php echo $res['p_name'];  ?> </td>
                                 <td> <?php echo $res['p_price'];  ?> </td>
                                 <td> <?php echo $res['stock'];  ?> </td>
-								<td>
+								<td> 
                                 <button class="btn-primary btn"> 
-                                    <a href="deletepro.php?id=<?php $user_id= $_SESSION['user_id']; echo $res['id']; ?>" class="logout-btn"><i class="fa-solid fa-trash"></i></a>
-                                    <a href="update.php?id=<?php $user_id= $_SESSION['user_id']; echo $res['id']; ?>" class="up_btn"><i class="fa-solid fa-pen-to-square"></i></a> 
+                                    <a href="palit.php?id=<?php echo $res['id']; ?>" class="text-white"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a> 
                                 </button> 
 								</td>
                             </tr>
@@ -86,20 +86,9 @@ if(isset($_GET['logout'])){
                             }
                         ?>
                 </tbody>
-            </table>
-            <table class="tble">
-                <thead>
-                    <th></th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td> <a href="dashboard.php" class="back-to"><i class="fa-solid fa-backward"></i> Back</a></td>
-                        <td> <a href="add.php" class="add-to"><i class="fa-sharp fa-solid fa-plus"></i> Add</a></td>
-                    </tr>                      
-                </tbody>
-            </table>
+            </table>    
         </div>
     </div>
-    
 </body>
+
 </html>

@@ -23,21 +23,46 @@ if(isset($_GET['logout'])){
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   <link rel="stylesheet" href="./css/dashboard.css">
   <title>Dasboard</title>
-    <link rel="stylesheet" href="./css/dashboard.css">
 </head>
-<body>
-    <div class="hero">
-        <nav>
-          <img src="./images/mylogo1.png" class="logo">
-          <ul>
-          <li><a href="#"><i class="fa fa-home" aria-hidden="true"> HOME</i></a></li>
-          <li><a href="details.php"><i class="fa-solid fa-address-card"> ABOUT US</i></i></a></li>
-          <li><a href="tinda.php"><i class="fa-brands fa-product-hunt"> PRODUCT</i></i></a></li>
-          </ul>
-          <a href="home.php">
-            <img src="./images/opawulo.png" id="icon">
-          </a>
-        </nav>
+<body style="background-image: url('./images/temple.gif'); background-repeat: no-repeat;background-attachment: fixed; background-size: 100% 100%;">
+    <div class="main_nav_container">
+    <div class="nav_container">
+      <div class="logo">
+      <div><img src="./images/mylogo1.png" class="logo"></div>
+      </div>
+      </div>
+     <input type="checkbox" id="click" />
+     <div class="top_navbar" >
+        <div><a href="feed.php"><i class="fa fa-rss" aria-hidden="true"> NOTESFEED&nbsp;&nbsp;&nbsp;&nbsp; </i></a></div>
+        <div><a href="notes.php"><i class="fa fa-book" aria-hidden="true"> ADD NOTES&nbsp;&nbsp;&nbsp;&nbsp;  </i></a></div>
+        <div><a href="tinda.php"><i class="fa-brands fa-product-hunt"> PRODUCT&nbsp;&nbsp;&nbsp;&nbsp;  </i></a></div>
+        <div><a href="home.php"><i class="fa fa-user" aria-hidden="true"> ACCOUNT&nbsp;&nbsp;&nbsp;&nbsp;  </i></a></div>
+      </div>
+      <label for="click" class="menu_btn">
+      <i class="fas fa-bars"></i>
+    </label>
+  </div>
+  <div class="title">
+            <table>
+                <thead>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="scroll">
+    <div id="player">
+                <audio controls autoplay hidden>
+                    <source src="music.ogg" type="audio/ogg">
+                    <source src="./music/hello.mp3" type="audio/mpeg">
+                </audio>
+            </div>
         <div class="info"> <?php
                 $select=mysqli_query($conn, "SELECT * FROM `user_form` WHERE id='$user_id'") or die('query failed');
                 if(mysqli_num_rows($select)>0){
@@ -45,11 +70,8 @@ if(isset($_GET['logout'])){
                 }
             ?>
           <h1>Wow <i class="fa-solid fa-face-surprise"></i>! <span><?php echo $fetch['name']; ?></span>,<br> That's an awesome <br> profile of yours</h1>
-          <p><i class="fa-solid fa-music"></i>Yeah, I woke up in the middle of the night
-              And I noticed my girl wasn't by my side <br>
-              Coulda sworn I was dreamin' for her
-              I was feenin' so I had to take a little ride<i class="fa-solid fa-music"></i></p>
-          <a href="tinda.php"><i class="fa-brands fa-product-hunt"></i> Go to Bussiness</a>
+          <p>Hello guys, hehe <i class="fa-solid fa-face-grin-tears"></i></p>
+          <a href="details.php"><i class="fa fa-info-circle" aria-hidden="true"></i> Other Details</a>
         </div>
         <div class="image-box">
           <img src="./images/mylogo1.png" class="back-img">

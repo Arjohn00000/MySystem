@@ -31,7 +31,7 @@ while($res = mysqli_fetch_array($query)){
             <form action="" method="POST">
             <div class="txt">
                 <label for="note">You Okay?,<br>Why are updating?</label><br>
-                <textarea name="note" placeholder="Write something..." id="note" value="<?php echo $res['note']; ?>" cols="50" rows="5"></textarea>
+                <textarea name="note" placeholder="Write something...(character limit is 255)" id="note" value="<?php echo $res['note']; ?>" cols="50" rows="5"></textarea>
             </div>
             <div class="mb-3">
                 <button type="submit" class="sub" name="update">Update</button>

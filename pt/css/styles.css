@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:wght@100;200;300;400;500&display=swap');
 
+.body{
+    color: black;
+}
 :root{
     --blue: #3498db;
     --dark-blue: #2980b9;
@@ -32,54 +35,62 @@
     background-color: var(--blue);
 }
 .btn,
-.logout-btn{
+.back-btn{
     width: 100%;
-    border-radius: 5px;
-    padding: 8px 20px;
+    border-radius: 10%;
+    padding: 2% 10%;
+    display: block;
     color: var(--white);
     text-align: center;
     cursor: pointer;
-    font-size: 20px;
-    margin-top: 10px;
+    font-size: 100%;
+    margin-top: 2%;
 }
 .btn{
-    background-color: var(--blue);
-    width: 100%;
+    background-color: transparent;
+    width: 87%;
+    margin: 1% 6.5% 0 6.5%;
+    border: 2px solid blue;
  }
 .btn:hover{
      background-color: var(--dark-blue);
 }
-.logout-btn{
-    background-color: var(--red);
-    width: 50%;
+.back-btn{
+    background-color: transparent;
+    width: 87%;
+    margin: 1% 6.5% 0 6.5%;
+    border: 2px solid red;
 }
 .logout-btn:hover{
     background-color: var(--dark-red);
 }
-.back-btn,
+.logout-btn,
 .update-btn,
 .up_btn{
     width: 100%;
-    border-radius: 5px;
-    padding: 8px 20px;
+    border-radius: 5%;
+    padding: 2% 10%;
+    display: block;
     color: var(--white);
     text-align: center;
     cursor: pointer;
-    font-size: 20px;
-    margin-top: 10px;
+    font-size: 100%;
+    margin-top: 1%;
 }
 .up_btn{
-    background-color: var(--blue);
-    width: 50%;
+    background-color:transparent;
+    width: 100%;
+    border: 2px solid blue;
+    border-radius: 20%;
 }
 .up_btn:hover{
     background-color: var(--dark-blue);
 }
-.back-btn{
-    background-color: var(--red);
+.logout-btn{
+    background-color: transparent;
     width: 100%;
-    display: block;
-    text-decoration: none;
+    border: 2px solid red;
+    border-radius: 20%;
 }
 .back-btn:hover{
     background-color: var(--dark-red);
@@ -104,28 +115,27 @@
 }
 .form-container{
     min-height: 100%;
-    background-color: var(--light-bg);
+    background-color: #170247b7;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    top: 10%;
+    padding: 55%;
 }
 .form-container form{
-    padding: 20px;
-    background-color: transparent;
+    padding: 5%;
+    background-color: var(--ufo);
     box-shadow: var(--box-shadow);
     text-align: center;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 2%;
     transition: all 1s;
 }
 .form-container form:hover{
     transform: scale(1.1);
 }
 .form-container form h3{
-    margin-bottom: 10px;
-    font-size: 30px;
+    margin-bottom: 2%;
+    font-size: 100%;
     color: var(--black);
     text-transform: uppercase;
 }
@@ -143,136 +153,130 @@
     font-size: 20px;
     color: var(--black);
 }
-.form-container form a{
+.form-container form p a{
     color: var(--blue);
 }
 .form-container form p a:hover{
     text-decoration: underline;
 }
 .container{
-    min-height: 100vh;
-    background-color: var(--light-bg);
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    width: 100%;
+    padding: 5%;
+    min-width: 100%;
+    bottom: 0;
 }
 .container .profile{
-    padding: 20px;
-    background-color: var(--light-bg);
+    padding: 5%;
+    background-color: transparent;
     box-shadow: var(--box-shadow);
     text-align: center;
-    width: 30%;
-    border-radius: 5px;
-    border: outset;
+    width: 50%;
+    border: none;
+    border-radius: 2%;
     transition: all 1s;
 }
 .container .profile:hover{
     transform: scale(1.1);
 }
 .container .profile img{
-    height: 150px;
-    width: 150px;
+    height: 20%;
+    width: 20%;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 5px;
-    display: flex;
+    margin-bottom: 2%;
 }
-.container .row{
-    position: fixed;
-    top: 2%;
-    margin-left: 3%;
-    background-color: (--ufo);
-    border-radius: 5px;
-}
-.container p{
-    position: fixed;
-    margin-left: 15%;
-    top: 10%;
-}
-.container .row h3 i a{
-    height: 200px;
-    width: 200px;
-    display: block;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1%;
-    margin-left: 25%;
-}
-.container .row h2{
-    font-size: 20px;
-    color: var(--black);
-    padding: 20px;
-    background-color: var(--black);
-    color: var(--white);
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 700;
-    text-align: center;
-    border-radius: 5px;
-    width: 100%;
-}
-.container .table a{
-    margin: 5px 0;
+.container .profile h3{
+    margin: 1%;
     font-size: 100%;
-    color: var(--light-bg);
-    text-decoration: none;
-    margin-right: 2%;
+    color: var(--white);
+    margin-bottom: 5%;
 }
 .container .profile p{
-    margin-top: 20px;
-    color: var(--black);
-    font-size: 20px;
+    margin-top: 1%;
+    color: var(--white);
+    font-size: 100%;
+}
+.container .profile a{
+    margin-top: 1%;
+    color: var(--white);
+    font-size: 100%;
 }
 .container .profile p a{
-    color: var(--red);
+    color: red;
+    font-weight: 600px;
+    font-size: 20px;
 }
 .container .profile p a:hover{
     text-decoration: underline;
 }
 .update_profile{
-    min-height: 100vh;
-    background-color: var(--light-bg);
+    top: 0;
+    min-height: 80%;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 5% 0;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 .update_profile form{
-    padding: 20px;
-    background-color: var(--black);
+    background-color: transparent;
     box-shadow: var(--box-shadow);
     text-align: center;
-    width: 80%;
-    border-radius: 5px;
+    width: 100%;
+    border-radius: 2%;
+    margin-top: 0;
+    bottom: 0;
+    border: 2px solid black;
+}
+.update_profile form img{
+    height: 10%;
+    width: 10%;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 5px;
+    border: 5px solid var(--black);
+    border-style: outset;
+    border-color: coral;
+    border-width: 5%;
 }
 .update_profile form .flex{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
-    gap: 15px;
-    padding: 20px;
-    background-color: var(--black);
+    margin-right: 5%;
+    margin-left: 5%;
+    gap: 0;
+    background-color: transparent;
 }
 .update_profile form .flex .inputBox{
     width: 49%;
+
 }
 .update_profile form .flex .inputBox span{
     text-align: left;
     display: block;
-    margin-top: 15px;
-    font-size: 20px;
+    margin-top: 2%;
+    font-size: 100%;
     color: var(--white);
-
+    font-weight: 900px;
 }
 .update_profile form .flex .inputBox .box{
     width: 100%;
     border-radius: 5px;
-    background-color: var(--white);
+    background-color: transparent;
     padding: 12px 14px;
     font-size: 15px;
-    color: var(--black);
+    color: var(--white);
     margin-top: 10px;
+    border: 1px solid var(--white);
+    border: 2px solid black;
+    font-weight: 900px;
+    background-color: grey;
+    opacity: 0.7;
 }
 @media(max-width:650px){
     .update_profile form .flex{
